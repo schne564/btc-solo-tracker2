@@ -17,6 +17,7 @@ fetch(endpoint)
     document.getElementById("difficulty").textContent = formatWithSuffix(data.difficulty);
     document.getElementById("lastBlock").textContent = formatWithSuffix(data.lastBlock);
     document.getElementById("chance").textContent = (data.chance * 100).toExponential(2) + " %";
+    document.getElementById("hashrate1hr").textContent = formatWithSuffix(data.hashrate1hr) + " H/s";
   })
   .catch((err) => {
     console.error("Error fetching data:", err);
