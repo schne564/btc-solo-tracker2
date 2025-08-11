@@ -16,7 +16,7 @@ fetch(endpoint)
     document.getElementById("bestshare").textContent = formatWithSuffix(data.bestshare);
     document.getElementById("difficulty").textContent = formatWithSuffix(data.difficulty);
     document.getElementById("lastBlock").textContent = formatWithSuffix(data.lastBlock);
-    document.getElementById("soloChance").textContent = (data.chance * 100).toExponential(2) + " %";
+    document.getElementById("soloChance").textContent = (data.soloChance * 100).toExponential(2) + " %";
     document.getElementById("hashrate1hr").textContent = formatWithSuffix(data.hashrate1hr);
   })
   .catch((err) => {
