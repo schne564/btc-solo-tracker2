@@ -20,7 +20,6 @@ function updateStats() {
       document.getElementById("soloChance").textContent = data.soloChance;
       document.getElementById("hashrate1hr").textContent = data.hashrate1hr;
       document.getElementById("hashrate5m").textContent = data.hashrate5m;
-      document.getElementById("localChance").textContent = data.localChance?.toFixed(8) + "%";
       document.getElementById("chancePerBlock").textContent = data.chancePerBlock;
       document.getElementById("chancePerDay").textContent = data.chancePerDay;
       document.getElementById("timeEstimate").textContent = data.timeEstimate;
