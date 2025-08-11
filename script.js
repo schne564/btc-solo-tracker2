@@ -18,6 +18,7 @@ fetch(endpoint)
     document.getElementById("lastBlock").textContent = formatWithSuffix(data.lastBlock);
     document.getElementById("soloChance").textContent = formatWithSuffix(data.soloChance);
     document.getElementById("hashrate1hr").textContent = formatWithSuffix(data.hashrate1hr);
+    document.getElementById("hashrate5m").textContent = formatWithSuffix(data.hashrate5m);
   })
   .catch((err) => {
     console.error("Error fetching data:", err);
