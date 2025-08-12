@@ -15,6 +15,7 @@ function updateStats() {
       document.getElementById("address").textContent = data.address;
       document.getElementById("workers").textContent = formatWithSuffix(data.workers);
       document.getElementById("bestshare").textContent = formatWithSuffix(data.bestshare);
+      document.getElementById("Shares").textContent = formatWithSuffix(data.shares);
       document.getElementById("difficulty").textContent = formatWithSuffix(data.difficulty);
       document.getElementById("lastBlock").textContent = formatWithSuffix(data.lastBlock);
       document.getElementById("soloChance").textContent = data.soloChance;
