@@ -24,6 +24,26 @@
       font-style: italic;
       color: #aaa;
     }
+
+    /* 🎉 Badge styling for new best share */
+    .new-best-share-badge {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #0f0;
+      color: #000;
+      padding: 10px 15px;
+      border-radius: 8px;
+      font-weight: bold;
+      box-shadow: 0 0 10px #0f0;
+      z-index: 9999;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
   </style>
 </head>
 <body>
@@ -42,7 +62,7 @@
   <div class="stat"><span class="label">Hashrate (5m):</span> <span id="hashrate5m"></span></div>
   <div class="stat"><span id="lastUpdated"></span></div>
 
+  <!-- 🔊 Sound and badge logic lives in script.js -->
   <script src="script.js"></script>
 </body>
-  <p><em id="lastUpdated"></em></p>
 </html>
