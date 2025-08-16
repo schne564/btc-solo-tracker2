@@ -8,6 +8,39 @@ function formatWithSuffix(value) {
 
 const endpoint = "https://broad-cell-151e.schne564.workers.dev/";
 
+function notifyNewBestShare(bestShare) {
+  const badge = document.createElement("div");
+  badge.textContent = `🎉 New Best Share: ${bestShare.toLocaleString()}`;
+  badge.style.position = "fixed";
+  badge.style.top = "20px";
+  badge.style.right = "20px";
+  badge.style.background = "#28a745";
+  badge.style.color = "#fff";
+  badge.style.padding = "10px 20px";
+  badge.style.borderRadius = "8px";
+  badge.style.boxShadow = "0 0 10px rgba(0,0,0,0.3)";
+  badge.style.zIndex = "9999";
+  badge.style.fontSize = "16px";
+  document.body.appendChild(badge);
+
+  // Remove after 5 seconds
+  setTimeout(() => badge.remove(), 5000);
+
+  // Optional: Play sound
+  const audio = new Audio("https://assets.mixkit.co/sfx/download/mixkit-achievement-bell-600.wav");
+  audio.play();
+}
+
+// Example usage after fetching Worker data
+fetch("https://broad-cell-151e.schne564.workers.dev/?address=bc1qd6mfkav3yzztuhpq6qg0kfm5fc2ay7jvy52rdn")
+  .then(res => res.json())
+  .then(data => {
+    if (data.newBestShare) {
+      notifyNewBestShare(data.bestshare);
+    }
+    // Continue rendering dashboard...
+  });
+
 function updateStats() {
   fetch(endpoint)
     .then((res) => res.json())
